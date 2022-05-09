@@ -24,8 +24,8 @@ app.use(express.static('./folder1'));
 
 const start = async () => {
   try {
-    app.listen(443, () => {
-      console.log('app listening on port 443');
+    app.listen(2000, () => {
+      console.log('app listening on port 2000');
     });
   } catch (err) {
     console.log(err);
