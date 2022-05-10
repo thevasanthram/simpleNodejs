@@ -1,4 +1,5 @@
 const express = require('express');
+const https = require('https')
 const res = require('express/lib/response');
 const app = express();
 
@@ -22,13 +23,8 @@ app.get('/home:id', (req, res) => {
 
 app.use(express.static('./folder1'));
 
-const start = async () => {
-  try {
-    app.listen(2000, () => {
-      console.log('app listening on port 2000');
-    });
-  } catch (err) {
-    console.log(err);
-  }
-};
-start();
+app.listen(2000, () => {
+  console.log('app listening on port 2000');
+});
+
+https.createServer(app).listen(8080)
