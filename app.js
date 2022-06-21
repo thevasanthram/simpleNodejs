@@ -3,7 +3,7 @@ const app = express();
 
 app.get('/', (req, res) => {
   // console.log('hello world');
-  res.send('hello from load balancer 1');
+  res.send('hello from load balancer 2');
 });
 
 app.listen(3000, () => {
